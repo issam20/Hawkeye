@@ -5,7 +5,7 @@ Created on Wed Jan 27 15:53:20 2021
 @author: tebib
 """
 import cv2
-from GazeTracking import game
+import game
 import app as api
 if __name__ == '__main__':
     # create an interactive window
