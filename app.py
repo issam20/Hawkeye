@@ -1,3 +1,4 @@
+import threading
 from flask import Flask,jsonify
 from flask_restful import Api, Resource
 from flask_cors import CORS, cross_origin
@@ -65,5 +66,5 @@ api.add_resource(Root, "/")
 api.add_resource(Settings, "/settings/<string:param>")
 
 def start():
-    app.run(debug=True)
+    threading.Thread(target=app.run).start()
     
