@@ -1,3 +1,6 @@
-numpy == 1.16.1
-opencv_python == 3.4.5.20
-dlib == 19.16.0
+numpy==1.19.1
+opencv-python==4.5.1.48
+dlib===19.21.1
+Flask==1.1.2
+flask-restful==0.3.8
+flask-cors==3.0.10
