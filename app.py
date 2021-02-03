@@ -60,7 +60,7 @@ class Stats(Resource):
     @cross_origin()
     def get(self):
         return {
-            'sucess_rate':0.90
+            'success_rate':0.90
         }
 class Root(Resource):
     @cross_origin()
