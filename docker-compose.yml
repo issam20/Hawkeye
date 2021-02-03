@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  hawkeye-api:
+    image: flask-api
+    #depends_on:
+
+    build:  .
+    devices:
+      - /dev/video0:/dev/video0
+    volumes: 
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    ports: 
+      - 5000:5000
+    #networks: 
+     # - hawkeye_network
+  hawkeye-api:
+    image: "hawkeye-api:latest"
+    
