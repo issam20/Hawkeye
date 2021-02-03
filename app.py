@@ -71,7 +71,7 @@ class Root(Resource):
 api.add_resource(Data, "/data")
 api.add_resource(Root, "/")
 api.add_resource(Settings, "/settings/<string:param>")
-api.add_resource(Settings, "/stats")
+api.add_resource(Stats, "/stats")
 
 def start():
     threading.Thread(target=app.run).start()
