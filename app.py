@@ -55,6 +55,13 @@ class Data(Resource):
     @cross_origin()
     def get(self):
         return jsonify(data)
+
+class Stats(Resource):
+    @cross_origin()
+    def get(self):
+        return {
+            'sucess_rate':0.90
+        }
 class Root(Resource):
     @cross_origin()
     def get(self):
@@ -64,6 +71,7 @@ class Root(Resource):
 api.add_resource(Data, "/data")
 api.add_resource(Root, "/")
 api.add_resource(Settings, "/settings/<string:param>")
+api.add_resource(Settings, "/stats")
 
 def start():
     threading.Thread(target=app.run).start()
